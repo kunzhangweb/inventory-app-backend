@@ -12,7 +12,10 @@ const path = require("path");
 const app = express();
 
 const corsOptions = {
-  origin: ["http://localhost:3000", "https://inventory-app-eosin.vercel.app"],
+  origin: [
+    "http://localhost:3000",
+    "https://inventory-app-black-nine.vercel.app",
+  ],
   credentials: true,
 };
 
