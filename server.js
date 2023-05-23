@@ -14,7 +14,7 @@ const app = express();
 const corsOptions = {
   origin: [
     "http://localhost:3000",
-    "https://inventory-app-black-nine.vercel.app",
+    "https://inventory-app-kzweber.vercel.app/",
   ],
   credentials: true,
 };
