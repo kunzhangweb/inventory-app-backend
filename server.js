@@ -37,6 +37,7 @@ app.use(errorHandler);
 
 const PORT = process.env.PORT || 5000;
 // connect to mongodb database
+mongoose.set("strictQuery", false);
 mongoose
   .connect(process.env.MONGODB_URL)
   .then(() => {
