@@ -1,6 +1,6 @@
 const asyncHandler = require("express-async-handler");
 const Product = require("../models/ProductModel");
-const { fileSizeFormatter } = require("../utils/fileUpload");
+const { fileSizeFormatter } = require("../utils/FileUpload");
 const cloudinary = require("cloudinary").v2;
 
 /**
