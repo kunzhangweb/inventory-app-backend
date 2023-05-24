@@ -16,7 +16,7 @@ const protectGuard = asyncHandler(async (req, res, next) => {
 
     // retrieve a specific user using the token
     const user = await User.findById(verified.id).select("-password");
-
+    console.log(user);
     if (!user) {
       res.status(401);
       throw new Error("User not found.");
