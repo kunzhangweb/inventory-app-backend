@@ -103,7 +103,7 @@ const loginUser = asyncHandler(async (req, res) => {
 
   // generate a token
   const token = generateToken(user._id);
-
+  console.log(token);
   // sending HttpOnly cookie
   if (passwordCorrect) {
     // Send HTTP-only cookie
