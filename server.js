@@ -16,7 +16,7 @@ const corsOptions = {
     "http://localhost:3000",
     "https://inventory-app-kzweber.vercel.app",
     "https://inventory-app-git-master-kzweber.vercel.app",
-    "https://inventory-f65wjangy-kzweber.vercel.app/",
+    "https://inventory-bdh4bepqu-kzweber.vercel.app",
   ],
   credentials: true,
 };
