@@ -105,14 +105,16 @@ const loginUser = asyncHandler(async (req, res) => {
   const token = generateToken(user._id);
 
   // sending HttpOnly cookie
-  res.cookie("token", token, {
-    // save the cookie
-    path: "/",
-    httpOnly: true,
-    expires: new Date(Date.now() + 1000 * 86400), // one day valid
-    // sameSite: "none",
-    // secure: true,
-  });
+  if (passwordCorrect) {
+    // Send HTTP-only cookie
+    res.cookie("token", token, {
+      path: "/",
+      // httpOnly: true,
+      expires: new Date(Date.now() + 1000 * 86400), // 1 day
+      // sameSite: "none",
+      // secure: true,
+    });
+  }
 
   if (user && passwordCorrect) {
     const { _id, username, email, password, photo, phone, biography } = user;
