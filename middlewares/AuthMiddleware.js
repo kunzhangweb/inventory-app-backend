@@ -5,11 +5,12 @@ const jwt = require("jsonwebtoken");
 const protectGuard = asyncHandler(async (req, res, next) => {
   try {
     const { token } = req.cookies;
+    console.log(token);
     if (!token) {
       res.status(401);
       throw new Error("Action not authorized. Please login first.");
     }
-    console.log(token);
+
     // token verification
     const JWT_SECRET = process.env.JWT_SECRET;
     const verified = jwt.verify(token, JWT_SECRET);
