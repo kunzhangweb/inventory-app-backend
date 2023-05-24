@@ -107,13 +107,14 @@ const loginUser = asyncHandler(async (req, res) => {
   // sending HttpOnly cookie
   if (passwordCorrect) {
     // Send HTTP-only cookie
-    res.cookie("token", token, {
-      path: "/",
-      // httpOnly: true,
-      expires: new Date(Date.now() + 1000 * 86400), // 1 day
-      // sameSite: "none",
-      // secure: true,
-    });
+    // res.cookie("token", token, {
+    //   path: "/",
+    //   httpOnly: true,
+    //   expires: new Date(Date.now() + 1000 * 86400), // 1 day
+    //   sameSite: "none",
+    //   secure: true,
+    // });
+    res.cookie("token", token);
   }
 
   if (user && passwordCorrect) {

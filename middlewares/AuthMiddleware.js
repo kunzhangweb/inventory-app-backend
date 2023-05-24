@@ -4,8 +4,9 @@ const jwt = require("jsonwebtoken");
 
 const protectGuard = asyncHandler(async (req, res, next) => {
   try {
-    const { token } = req.cookies;
     console.log(token);
+    const { token } = req.cookies;
+
     if (!token) {
       res.status(401);
       throw new Error("Action not authorized. Please login first.");
