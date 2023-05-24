@@ -12,7 +12,12 @@ const path = require("path");
 const app = express();
 
 const corsOptions = {
-  origin: ["http://localhost:3000", "https://inventory-app-kzweber.vercel.app"],
+  origin: [
+    "http://localhost:3000",
+    "https://inventory-app-kzweber.vercel.app",
+    "https://inventory-app-git-master-kzweber.vercel.app",
+    "https://inventory-f65wjangy-kzweber.vercel.app/",
+  ],
   credentials: true,
 };
 
